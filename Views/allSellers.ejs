@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="/Css/home.css">
+<body>
+    <a href="/"><button id="HomeBtn">Go to Home Page</button></a>
+   <h1>All Sellers Page</h1>
+    <div class="allSellers">
+    <%for(sellers of allSellers){%>
+
+
+
+    <a href="<%- `/sellerAllProducts/${sellers._id}` %>"><h2><%=sellers.businessName  %> </h2></a>
+
+    
+
+       
+
+        <%}%>
+    </div>
+</body>
+</html>

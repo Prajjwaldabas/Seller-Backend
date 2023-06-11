@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <link rel="stylesheet" href="/Css/dashboard.css">
+</head>
+<body>
+   
+   
+
+<div id="container">
+
+    <div id="searchInput">
+        <form action="/search/<%= seller._id %>" method="GET" >
+            <input type="text" name="query" placeholder="Search products by Product Name" >
+            <button type="submit">Search</button>
+          </form>
+       
+    </div>
+    <div class="btnContainer">
+    <div>
+        <button>Home Page</button>
+    </div>
+    <div>
+        <a href="/allSellers"><button>All Sellers Page</button></a>
+    </div>
+</div>
+    
+    <div id="storeInfo">
+        <h3>Store Information</h3>
+        <p>Address: <%= seller.storeInfo.address %></p>
+        <p>GST: <%= seller.storeInfo.gst %></p>
+        <p>Store Timings: <%= seller.storeInfo.storeTimings %></p>
+    
+    </div>
+
+    <h1>
+       <%=seller.businessName%> Products 
+    </h1>
+       <h1>Products Available</h1>
+  
+    <% if (seller.inventory.length > 0) { %>
+      <ul id="prodContainer">
+        <% products.forEach((product) => { %>
+            <div id="prod">
+            
+                <div id="image">
+                    <% product.images.forEach((image) => { %>
+                        <li><img src="<%= image %>" alt="Product Image"></li>
+                      <% }) %>
+                </div>
+          <li>
+            <p>Category: <%= product.category %></p>
+            <p>Sub Category: <%= product.subCategory %></p>
+            <p>Product Name: <%= product.productName %></p>
+            <p>MRP: <%= product.mrp %></p>
+            <p>SP: <%= product.sp %></p>
+            <p>Quantity: <%= product.quantity %></p>
+            <% if (product.images.length > 0) { %>
+             
+             
+               
+             
+            <% } %>
+          </li>
+        </div>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No products available.</p>
+    <% } %>
+
+</div>
+
+
+    
+ 
+
+  
+
+
+</div>
+</body>
+</html>

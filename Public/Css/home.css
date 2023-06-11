@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(69, 69, 69);
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+   position: relative;
+}
+
+#HomeBtn{
+    position: absolute;
+    right: 1% !important;
+}
+#container{
+    margin-top: 18%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+
+}
+
+button{
+    background-color: rgb(37, 163, 163);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+border-radius: 20px;
+    padding: 5px;
+    width: 250px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(7, 85, 74);
+}
+
+a{
+
+    color: rgb(30, 209, 229);
+    /* text-decoration: none; */
+}
+
+.allSellers{
+
+display: flex;
+/* justify-content: center; */
+/* align-items: center; */
+flex-direction: column;
+}
+h2{
+    color: rgb(37, 212, 207);
+}
+h1{
+    color: white;
+}

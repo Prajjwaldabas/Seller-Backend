@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="Css/signup.css">
+</head>
+<body>
+    
+    <div id="container">
+    
+    <h1>
+        Sign Up
+    </h1>
+<form action="/create" method="post" >
+    <div >
+    <label for="Email">Email:</label>
+    <input type="email" name="email" >
+</div>
+
+<div>
+    <label for="Name">Business Name:</label>
+    <input type="text" name="businessName">
+</div>
+   
+
+   <div> <label for="Password">Password:</label>
+    <input type="password" name="password">
+</div>
+<div>
+
+    <label for=" Confirm Password">Confirm Password:</label>
+    <input type="password" name="confirmPassword">
+</div>
+
+ <button type="submit" > Create Account  </button>
+
+ 
+ <p>Already have an Account ? <a href="/signin">Sign In</a></p>
+
+ 
+
+
+</form>
+
+</div>
+
+<script>
+    <% if (flash.success && flash.success.length > 0) {%>
+        new Noty({
+            theme: 'relax',
+            text: "<%= flash.success %>",
+            type: 'success',
+            layout: 'topRight',
+            timeout: 1500
+            
+        }).show();    
+    <%} %>
+
+    <% if (flash.error && flash.error.length > 0) {%>
+        new Noty({
+            theme: 'relax',
+            text: "<%= flash.error %>",
+            type: 'error',
+            layout: 'topRight',
+            timeout: 1500
+            
+        }).show();    
+    <%} %>
+</script>
+</body>
+</html>
