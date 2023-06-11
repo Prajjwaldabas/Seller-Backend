@@ -20,7 +20,7 @@ app.use(express.static('./Public'));
 
 
 app.set('view engine', 'ejs');
-app.set ('views', './views');
+app.set ('views', './Views');
 
 
 
