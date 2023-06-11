@@ -14,14 +14,14 @@ const createSeller = async (req, res) => {
     // Check if the password and confirm password match
     if (password !== confirmPassword) {
       req.flash('error', 'Passwords do not match');
-      return res.redirect('/signup');
+      return res.redirect('https://sellerkart.onrender.com/signup');
     }
 
     // Check if the seller already exists in the database
     const existingSeller = await Seller.findOne({ email });
     if (existingSeller) {
       req.flash('error', 'Seller already exists');
-      return res.redirect('/signin');
+      return res.redirect('https://sellerkart.onrender.com/signin');
     }
 
     // Generate a salt for password hashing
@@ -41,11 +41,11 @@ const createSeller = async (req, res) => {
     await seller.save();
 
     req.flash('success', 'Account Created');
-    return res.redirect('/signin');
+    return res.redirect('https://sellerkart.onrender.com/signin');
   } catch (error) {
     console.error('Error creating seller:', error);
     req.flash('error', 'Error creating seller');
-    return res.redirect('/signup');
+    return res.redirect('https://sellerkart.onrender.com/signup');
   }
 };
 
@@ -72,7 +72,7 @@ const saveSellerInfo = async (req, res) => {
     // Save the updated seller to the database
     await seller.save();
 
-    return  res.redirect(`/dashboard/seller/${email}`)
+    return  res.redirect(`https://sellerkart.onrender.com/dashboard/seller/${email}`)
   } catch (error) {
     console.error('Error saving store information:', error);
     return res.status(500).json({ error: 'Internal server error' });
@@ -107,7 +107,7 @@ console.log(imageURL,"image url is here")
     // Save the updated seller to the database
     await seller.save();
 
-    return res.redirect(`/dashboard/seller/${email}`)
+    return res.redirect(`https://sellerkart.onrender.com/dashboard/seller/${email}`)
   } catch (error) {
     console.error('Error saving product information:', error);
     return res.status(500).json({ error: 'Internal server error' });
