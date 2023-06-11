@@ -88,3 +88,14 @@ button:hover{
 a{
     color: rgb(175, 194, 32);
 }
+
+.btnContainer{
+    width: 400px;
+    
+    position: absolute;
+    left: 2%;
+    top: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
