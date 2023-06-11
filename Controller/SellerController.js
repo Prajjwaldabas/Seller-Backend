@@ -196,4 +196,4 @@ return res.render('dashboard', { seller:seller });
 
 
 
-module.exports = { createSeller, saveSellerInfo, saveProductInfo ,showAllProducts,allProducts,searchProducts,deleteProduct};
+module.exports = { createSeller, saveSellerInfo, saveProductInfo ,showAllProducts,allProducts,searchProducts};
