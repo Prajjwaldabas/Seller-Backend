@@ -9,7 +9,7 @@ const passport=require('passport')
 const LocalStrategy = require('passport-local').Strategy;
 
 
-router.get('https://sellerkart.onrender.com/',Home.home);
+router.get('https://sellerkart.onrender.com',Home.home);
 
 router.get('https://sellerkart.onrender.com/signup',Home.signup);
 
