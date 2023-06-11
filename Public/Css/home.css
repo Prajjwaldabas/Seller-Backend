@@ -53,5 +53,8 @@ h2{
     color: rgb(37, 212, 207);
 }
 h1{
+    font-size: 50px;
+    top: 26%;
+    position: absolute;
     color: white;
 }
